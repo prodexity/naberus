@@ -1,0 +1,34 @@
+AllCops:
+  DisplayCopNames: true
+
+Rails:
+  Enabled: true
+
+Style/StringLiterals:
+  Enabled: false
+  # EnforcedStyle: double_quotes # if enabled, this can be single_quotes or double_quotes
+
+Metrics/LineLength:
+  Max: 135
+  # To make it possible to copy or click on URIs in the code, we allow lines
+  # containing a URI to be longer than Max.
+  AllowHeredoc: true
+  AllowURI: true
+  URISchemes:
+    - http
+    - https
+
+Metrics/MethodLength:
+  CountComments: false  # count full line comments?
+  Max: 25
+
+Metrics/AbcSize:
+  # The ABC size is a calculated magnitude, so this number can be a Fixnum or a Float.
+  Max: 40
+
+Metrics/CyclomaticComplexity:
+  # even 15 may still be acceptable
+  Max: 10
+
+Metrics/PerceivedComplexity:
+  Max: 10
